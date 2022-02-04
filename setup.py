@@ -27,6 +27,9 @@ install_requires = [
     'matplotlib',
     'numpy',
     'astropy',
+    'time',
+    'pathlib',
+    'multiprocessing'
 ]
 
 
