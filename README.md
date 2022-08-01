@@ -1,9 +1,12 @@
 # JLAB_TESS
-Objective: Discover light curves for binary star systems and measure the stars' properties from analyzing the light curve data
+## Objective
+Discover light curves for binary star systems and measure the stars' properties from analyzing the light curve data
 
-This lab should mostly be done using subMIT. More details for setting up an account on subMIT are located in the subMIT [user guide](http://submit04.mit.edu./submit-users-guide/intro.html).
+## Background
+Refer to the following sources: TODO (insert sources)
 
-Once you can ssh onto a subMIT machine, proceed to the next section for setting up an environment for developing in Python.
+
+This lab should mostly be done using subMIT. More details for setting up an account on subMIT are located in the subMIT [user guide](http://submit04.mit.edu./submit-users-guide/intro.html). Once you can ssh onto a subMIT machine, proceed to the next section for setting up an environment for developing in Python.
 
 ## Setting up conda on subMIT and using JupyterHub
 
