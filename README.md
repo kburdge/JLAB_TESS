@@ -1,4 +1,5 @@
 # JLAB_TESS
+Objective: Discover light curves for binary star systems and measure the stars' properties from analyzing the light curve data
 
 This lab should mostly be done using subMIT. More details for setting up an account on subMIT are located in the subMIT [user guide](http://submit04.mit.edu./submit-users-guide/intro.html).
 
@@ -32,12 +33,20 @@ conda install gfortran_linux-64 gcc_linux-64
 conda install pandas matplotlib scipy lmfit
 pip install ellc astropy ultranest
 ```
-5. Work on Jupyter hub here: https://submit00.mit.edu/jupyter and select the name of your conda environment (`tess` from above) before creating a Jupyter notebook.
+5. Work on Jupyter hub here: https://submit00.mit.edu/jupyter and select the name of your conda environment (`tess` from above) before creating an iPython notebook.
 
 ## Tutorials on Lomb-Scargle (and related period-finding algorithms), ELLC, and MCMC Sampling
-todo: briefly go over the notebooks and explain what students can learn from them
+There are several iPython notebooks that are useful to understand working with light curve data.
+We recommend you to go through the following notebook tutorials in order.
 
+1_basic_lomb_scargle_tutorial.ipynb
 
+2_applying_lomb_scargle_to_TESS_lightcurve.ipynb
 
+3_applying_lomb_scargle_to_TESS_sector.ipynb
+
+4_ellc_tutorial.ipynb
+
+5_initial_ellc_fit.ipynb
 
 
