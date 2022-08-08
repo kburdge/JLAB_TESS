@@ -3,8 +3,13 @@
 Discover light curves for binary star systems and measure the stars' properties from analyzing the light curve data
 
 ## Background
-Refer to the following sources: TODO (insert sources)
+From studying light curve data (brightness over time, we can deduce a considerable amount of information about the properties of astronomical objects. In this lab, we are interested in utilizing a repository of light curve data from Transiting Exoplanet Survey Satellite (TESS) to discover binary stars and understand their properties.
 
+[Binary stars](https://en.wikipedia.org/wiki/Binary_star) have lightcurves containing certain distinctive features. In the figure below, we see two dips in brightness during every period (corresponding to an orbit of one star around another). These correspond to eclipsing events when one star partially blocks the light from the other in the detector's line-of-sight, decreasing the total amount of light reaching the detector. The depths, widths, curvatures, and other characteristics of light curve depend on many physical parameters of the stars, and in this lab, you will learn how to calculate these parameters.
+
+<img width="540" alt="Screen Shot 2022-08-08 at 1 26 55 AM" src="https://user-images.githubusercontent.com/42904723/183345514-1238da26-6d95-4ded-98d2-90eb1f3e2853.png">
+
+TESS was primarily designed to discover exoplanets orbiting nearby bright stars, but as you will see, there are quite a few TESS candidate light curves that are highly unlikely due to exoplanets, but instead binary stars!
 
 ## Setup: subMIT, conda, the code repository for the lab, and JupyterHub.
 This lab should mostly be done via an ssh into the subMIT cluster([user guide](http://submit04.mit.edu./submit-users-guide/intro.html)). We advise against doing this lab on your local computer as there are installation issues specific to the laptop's operating system (especially Windows) that the staff might not be able to help you on. 
@@ -39,7 +44,7 @@ cd /home/submit/{kerb_user}
 git clone https://github.com/kburdge/JLAB_TESS.git
 ```
 Congrats! You can now begin to made edits to the repository and start running iPython notebooks.
-Go on [JupyterHub] (https://submit00.mit.edu/jupyter), launch the server, and select `tess` as the kernel.
+Go on [JupyterHub](https://submit00.mit.edu/jupyter), launch the server, and select `tess` as the kernel.
 <img width="400" alt="Screen Shot 2022-08-08 at 12 59 32 AM" src="https://user-images.githubusercontent.com/42904723/183342604-1faf4bb6-2d1c-45c4-b369-f0fcfbbbcdb1.png">
 
 
@@ -49,7 +54,7 @@ We recommend you to go through the following notebook tutorials in order.
 
 #### 1_basic_lomb_scargle_tutorial.ipynb
 
-This notebook introduces the basics of using the Lomb-Scargle period finding algorithm. Lomb-Scargle is an analog of the Fourier transform, adapted to the non-equispaced sampling characteristic of astronomical time series [1].
+This notebook introduces the basics of using the Lomb-Scargle period finding algorithm. Lomb-Scargle is an analog of the Fourier transform, adapted to the non-equispaced sampling characteristic of astronomical time series [1]. We phase-fold the light curves and generate their plots, which will aid in discovering binary star candidates later on.
 
 #### 2_applying_lomb_scargle_to_TESS_lightcurve.ipynb
 This module will apply astropy's Lomb-Scargle algorithm to real data from the Transiting Exoplanet Survey Satellite (TESS). You will learn how to open and extract the relevant data from the TESS .fits files.
@@ -64,6 +69,10 @@ We demonstrate how to use the [ellc](https://github.com/pmaxted/ellc) python mod
 #### 5_initial_ellc_fit.ipynb
 We show how to perform an initial fit of the ellc model onto real light curve data. We make an initial estimate of the parameters, set up bounds, and use scipy's minimize function to perform the fitting.
 
+## Experiment and Analysis
+Discover a binary star light curve candidate from the repository of TESS data. Once you've found your candidate, fit an ELLC model and measure the parameters of the star system.
+
+You may NOT use any of the candidates used in our example code (todo: insert target object ids).
 
 ## References
 [1] Jacob T. VanderPlas 2018 ApJS 236 16
