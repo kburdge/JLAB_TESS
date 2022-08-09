@@ -37,6 +37,7 @@ conda create --name tess python=3.9
 4. Install packages for that environment
 ```
 conda install gfortran_linux-64 gcc_linux-64
+conda install mpi4py
 conda install pandas matplotlib scipy lmfit
 pip install ellc astropy ultranest
 ```
