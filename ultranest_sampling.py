@@ -9,9 +9,9 @@ import corner
 import math
 import ultranest
 import ellc
-from mass_to_radii import MR_Relation
+from white_dwarf_relations import MR_Relation
 
-param_names = ["r1","r2","incl","t_zero","sbratio","heat_1", "heat_2", "amp"]
+param_names = ["m1","m2","incl","t_zero","sbratio","heat_1", "heat_2", "amp"]
 df = pd.read_excel("1719ac.xlsx", header=None)
 t = df[1].to_numpy()
 y = df[2].to_numpy()
