@@ -3,6 +3,8 @@
 Discover light curves for binary star systems, measure the stars' properties from analyzing the light curve data, and measuring uncertainties using MCMC sampling when working with complex functions.
 
 ## Background
+TODO: add more background about certain types of stars, binary systems, and links to resources, etc.
+
 From studying light curve data (brightness over time, we can deduce a considerable amount of information about the properties of astronomical objects. In this lab, we are interested in utilizing a repository of light curve data from Transiting Exoplanet Survey Satellite (TESS) to discover binary stars and understand their properties.
 
 [Binary stars](https://en.wikipedia.org/wiki/Binary_star) have lightcurves containing certain distinctive features. In the figure below, we see two dips in brightness during every period (corresponding to an orbit of one star around another). These correspond to eclipsing events when one star partially blocks the light from the other in the detector's line-of-sight, decreasing the total amount of light reaching the detector. The depths, widths, curvatures, and other characteristics of light curve depend on many physical parameters of the stars, and in this lab, you will learn how to calculate these parameters.
