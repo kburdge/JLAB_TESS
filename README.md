@@ -3,6 +3,8 @@
 Discover light curves for binary star systems, measure the stars' properties from analyzing the light curve data, and measuring uncertainties using MCMC sampling when working with complex functions.
 
 ## Background
+TODO: add more background about certain types of stars, binary systems, and links to resources, etc.
+
 From studying light curve data (brightness over time, we can deduce a considerable amount of information about the properties of astronomical objects. In this lab, we are interested in utilizing a repository of light curve data from Transiting Exoplanet Survey Satellite (TESS) to discover binary stars and understand their properties.
 
 [Binary stars](https://en.wikipedia.org/wiki/Binary_star) have lightcurves containing certain distinctive features. In the figure below, we see two dips in brightness during every period (corresponding to an orbit of one star around another). These correspond to eclipsing events when one star partially blocks the light from the other in the detector's line-of-sight, decreasing the total amount of light reaching the detector. The depths, widths, curvatures, and other characteristics of light curve depend on many physical parameters of the stars, and in this lab, you will learn how to calculate these parameters.
@@ -62,6 +64,13 @@ This module will apply astropy's Lomb-Scargle algorithm to real data from the Tr
 #### 3_applying_lomb_scargle_to_TESS_sector.ipynb
 This module will apply the Lomb-Scargle algorithm onto an entire sector of TESS (containing ~20,000 targets). We implement multithreading to speed up processing the files and data.
 
+You will end up saving a lot of plots for phase-folded light curves on subMIT. To view your generated png plots, you could write an iPython cell that opens and displays all the saved png files (or display the plots during the process of saving them!).
+
+Alteratively, you can transfer the directory of files from subMIT onto your local laptop. Do this by running
+`scp -r {kerb_user}@submit.mit.edu:/home/submit/{kerb_user}/{directory_name} .`
+
+Read https://linuxhandbook.com/transfer-files-ssh/ for more information on transferring files between your local computer and a remote server.
+
 #### 4_ellc_tutorial.ipynb
 
 We demonstrate how to use the [ellc](https://github.com/pmaxted/ellc) python module to generate light curves from inputting binary star system parameters relating to the radii, semi-major axis, inclination angle, surface brightness ratio, etc [2].
@@ -69,10 +78,21 @@ We demonstrate how to use the [ellc](https://github.com/pmaxted/ellc) python mod
 #### 5_initial_ellc_fit.ipynb
 We show how to perform an initial fit of the ellc model onto real light curve data. We make an initial estimate of the parameters, set up bounds, and use scipy's minimize function to perform the fitting.
 
+#### TODO: there are multiple python libraries that support MCMC library. Figure out which could be the most appropriate for a JLAB student. 
+An advantage of using ultranest is both speed, and the fact that students will be able to interface with slurm.
+
 ## Experiment and Analysis
 Discover a binary star light curve candidate from the repository of TESS data. Once you've found your candidate, fit an ELLC model and measure the parameters of the star system. Perform an MCMC sampling of the model on the data to get uncertainty values for the lightcurve parameters.
 
 You may NOT use any of the candidates used in our example code (todo: insert target object ids).
+
+Alternative suggestion for JLAB experiment
+- provide students with white dwarf-white dwarf binary system light curve used for calibrating LISA
+- model the experiment after Joan's RSI project
+- Pros: we can incorporate the white dwarf mass-radii relationship so students can get the absolute masses from fitting ELLC, perform further calculations such as solving for the system's semi-major axis with Kepler's laws, etc.
+
+Further ideas:
+- cross-matching with Gaia to obtain more information about the star system
 
 ## References
 [1] Jacob T. VanderPlas 2018 ApJS 236 16
