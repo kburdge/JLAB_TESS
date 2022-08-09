@@ -1,6 +1,6 @@
 # JLAB_TESS
 ## Objective
-Discover light curves for binary star systems and measure the stars' properties from analyzing the light curve data
+Discover light curves for binary star systems, measure the stars' properties from analyzing the light curve data, and measuring uncertainties using MCMC sampling when working with complex functions.
 
 ## Background
 From studying light curve data (brightness over time, we can deduce a considerable amount of information about the properties of astronomical objects. In this lab, we are interested in utilizing a repository of light curve data from Transiting Exoplanet Survey Satellite (TESS) to discover binary stars and understand their properties.
@@ -70,11 +70,12 @@ We demonstrate how to use the [ellc](https://github.com/pmaxted/ellc) python mod
 We show how to perform an initial fit of the ellc model onto real light curve data. We make an initial estimate of the parameters, set up bounds, and use scipy's minimize function to perform the fitting.
 
 ## Experiment and Analysis
-Discover a binary star light curve candidate from the repository of TESS data. Once you've found your candidate, fit an ELLC model and measure the parameters of the star system.
+Discover a binary star light curve candidate from the repository of TESS data. Once you've found your candidate, fit an ELLC model and measure the parameters of the star system. Perform an MCMC sampling of the model on the data to get uncertainty values for the lightcurve parameters.
 
 You may NOT use any of the candidates used in our example code (todo: insert target object ids).
 
 ## References
 [1] Jacob T. VanderPlas 2018 ApJS 236 16
+
 [2] Maxted, P.F.L. 2016. A fast, flexible light curve model for detached
    eclipsing binary stars and transiting exoplanets. A&A 591, A111
