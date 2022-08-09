@@ -69,6 +69,9 @@ We demonstrate how to use the [ellc](https://github.com/pmaxted/ellc) python mod
 #### 5_initial_ellc_fit.ipynb
 We show how to perform an initial fit of the ellc model onto real light curve data. We make an initial estimate of the parameters, set up bounds, and use scipy's minimize function to perform the fitting.
 
+#### TODO: there are multiple python libraries that support MCMC library. Figure out which could be the most appropriate for a JLAB student. 
+An advantage of using ultranest is both speed, and the fact that students will be able to interface with slurm.
+
 ## Experiment and Analysis
 Discover a binary star light curve candidate from the repository of TESS data. Once you've found your candidate, fit an ELLC model and measure the parameters of the star system. Perform an MCMC sampling of the model on the data to get uncertainty values for the lightcurve parameters.
 
