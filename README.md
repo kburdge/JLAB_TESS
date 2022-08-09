@@ -77,6 +77,11 @@ Discover a binary star light curve candidate from the repository of TESS data. O
 
 You may NOT use any of the candidates used in our example code (todo: insert target object ids).
 
+Alternative suggestion for JLAB experiment
+- provide students with white dwarf-white dwarf binary system light curve used for calibrating LISA
+- model the experiment after Joan's RSI project
+- Pros: we can incorporate the white dwarf mass-radii relationship so students can get the absolute masses from fitting ELLC, perform further calculations such as solving for the system's semi-major axis with Kepler's laws, etc.
+
 ## References
 [1] Jacob T. VanderPlas 2018 ApJS 236 16
 
