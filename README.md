@@ -64,6 +64,13 @@ This module will apply astropy's Lomb-Scargle algorithm to real data from the Tr
 #### 3_applying_lomb_scargle_to_TESS_sector.ipynb
 This module will apply the Lomb-Scargle algorithm onto an entire sector of TESS (containing ~20,000 targets). We implement multithreading to speed up processing the files and data.
 
+You will end up saving a lot of plots for phase-folded light curves on subMIT. To view your generated png plots, you could write an iPython cell that opens and displays all the saved png files (or display the plots during the process of saving them!).
+
+Alteratively, you can transfer the directory of files from subMIT onto your local laptop. Do this by running
+`scp -r {kerb_user}@submit.mit.edu:/home/submit/{kerb_user}/{directory_name} .`
+
+Read https://linuxhandbook.com/transfer-files-ssh/ for more information on transferring files between your local computer and a remote server.
+
 #### 4_ellc_tutorial.ipynb
 
 We demonstrate how to use the [ellc](https://github.com/pmaxted/ellc) python module to generate light curves from inputting binary star system parameters relating to the radii, semi-major axis, inclination angle, surface brightness ratio, etc [2].
@@ -83,6 +90,9 @@ Alternative suggestion for JLAB experiment
 - provide students with white dwarf-white dwarf binary system light curve used for calibrating LISA
 - model the experiment after Joan's RSI project
 - Pros: we can incorporate the white dwarf mass-radii relationship so students can get the absolute masses from fitting ELLC, perform further calculations such as solving for the system's semi-major axis with Kepler's laws, etc.
+
+Further ideas:
+- cross-matching with Gaia to obtain more information about the star system
 
 ## References
 [1] Jacob T. VanderPlas 2018 ApJS 236 16
