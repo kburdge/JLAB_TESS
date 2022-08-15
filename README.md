@@ -1,20 +1,20 @@
 # JLAB_TESS
 ## Objective
-Discover light curves for binary star systems, measure the stars' properties from analyzing the light curve data, and measuring uncertainties using MCMC sampling when working with complex functions.
+Discover light curves for eclipsing binary star systems, measure the stars' properties (radii, inclination, orbital period etc.) from analyzing the light curve data, and measuring uncertainties for each of the physical parameters using MCMC sampling when working with complex functions.
 
 ## Background
 TODO: add more background about certain types of stars, binary systems, and links to resources, etc.
 
-From studying light curve data (brightness over time, we can deduce a considerable amount of information about the properties of astronomical objects. In this lab, we are interested in utilizing a repository of light curve data from Transiting Exoplanet Survey Satellite (TESS) to discover binary stars and understand their properties.
+From studying light curve data (brightness over time), we can deduce a considerable amount of information about the properties of astronomical objects. In this lab, we are interested in utilizing a repository of light curve data from the Transiting Exoplanet Survey Satellite (TESS) to discover eclipsing binary stars and understand their properties.
 
-[Binary stars](https://en.wikipedia.org/wiki/Binary_star) have lightcurves containing certain distinctive features. In the figure below, we see two dips in brightness during every period (corresponding to an orbit of one star around another). These correspond to eclipsing events when one star partially blocks the light from the other in the detector's line-of-sight, decreasing the total amount of light reaching the detector. The depths, widths, curvatures, and other characteristics of light curve depend on many physical parameters of the stars, and in this lab, you will learn how to calculate these parameters.
+[Binary stars](https://en.wikipedia.org/wiki/Binary_star) have lightcurves containing certain distinctive features. In the figure below, the blue curves show smaple lightcurves that we might see for the binary star systems depicted above it. We see two dips in brightness during every period (corresponding to an orbit of one star around another). These correspond to eclipsing events when one star partially blocks the light from the other in the detector's line-of-sight, decreasing the total amount of light reaching the detector. The depths, widths, curvatures, and other characteristics of light curve depend on many physical parameters of the stars, and in this lab, you will learn how to calculate these parameters by modeling the lightcurves.
 
 <img width="540" alt="Screen Shot 2022-08-08 at 1 26 55 AM" src="https://user-images.githubusercontent.com/42904723/183345514-1238da26-6d95-4ded-98d2-90eb1f3e2853.png">
 
 TESS was primarily designed to discover exoplanets orbiting nearby bright stars, but as you will see, there are quite a few TESS candidate light curves that are highly unlikely due to exoplanets, but instead binary stars!
 
 ## Setup: subMIT, conda, the code repository for the lab, and JupyterHub.
-This lab should mostly be done via an ssh into the subMIT cluster([user guide](http://submit04.mit.edu./submit-users-guide/intro.html)). We advise against doing this lab on your local computer as there are installation issues specific to the laptop's operating system (especially Windows) that the staff might not be able to help you on. 
+This lab should mostly be done via an ssh into the subMIT cluster ([user guide](http://submit04.mit.edu./submit-users-guide/intro.html)). We advise against doing this lab on your local computer as there are installation issues specific to the laptop's operating system (especially Windows) that the staff might not be able to help you on. 
 
 Once you can ssh onto a subMIT machine, proceed to the next steps for setting up an environment for developing in Python.
 1. ssh into submit.mit.edu, and install miniforge3 to `/work/submit/{your_kerb_user}`. In general, third-party software should be installed in your work directory, and your own code should be under your home directory (`/home/submit/{kerb_user}`). Additionally, `conda` memory requirements can be huge, and the work directory has a much larger disk quota than the home directory.
