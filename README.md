@@ -24,7 +24,7 @@ cd /work/submit/{kerb_user}
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 
 # Run and follow instructions on screen
-# Make sure to install into /work/submit/{kerb_user} instead of the default location, which is your user home directory!
+# Make sure to install into /work/submit/{kerb_user}/miniforge3 instead of the default location, which is your user home directory!
 bash Miniforge3-Linux-x86_64.sh
 ```
 
